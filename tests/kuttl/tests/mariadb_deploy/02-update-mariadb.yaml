@@ -1,0 +1,5 @@
+apiVersion: kuttl.dev/v1beta1
+kind: TestStep
+commands:
+  - script: |
+      oc patch mariadbs.mariadb.openstack.org openstack --type merge  -p '{"spec":{"containerImage":"quay.io/tripleomastercentos9/openstack-mariadb:current-tripleo"}}'

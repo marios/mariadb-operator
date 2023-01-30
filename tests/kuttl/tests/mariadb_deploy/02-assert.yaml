@@ -1,0 +1,12 @@
+# Check for updated container image
+#
+apiVersion: mariadb.openstack.org/v1beta1
+kind: MariaDB
+metadata:
+  name: openstack
+  namespace: openstack
+spec:
+  containerImage: quay.io/tripleomastercentos9/openstack-mariadb:current-tripleo
+  secret: osp-secret
+  storageClass: local-storage
+  storageRequest: 500M
